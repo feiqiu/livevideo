@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <springProfile name="dev">
+        <logger name="com.zzh.springboot.demo.dao" level="DEBUG" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+    </springProfile>
+
+    <springProfile name="staging">
+        <logger name="hello" level="INFO"/>
+    </springProfile>
+
+    <springProfile name="prod">
+        <logger name="hello" level="DEBUG"/>
+    </springProfile>
+      
+</configuration>

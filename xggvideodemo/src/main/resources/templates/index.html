@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>IP Camera Live</title>
+</head>
+<body>
+<form action="#" th:action="@{/video/play}" th:object="${camInfo}" th:method="post">
+    <table>
+        <tr>
+            <td>Cam ID:</td><td><input type="text" th:field="*{camId}" /></td>
+        </tr>
+        <tr>
+            <td>Cam Name:</td><td><input type="text" th:field="*{camName}" /></td>
+        </tr>
+        <tr>
+            <td>Cam IP:</td><td><input type="text" th:field="*{ip4Address}" /></td>
+        </tr>
+        <tr>
+            <td>User:</td><td><input type="text" th:field="*{user}" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td><td><input type="text" th:field="*{password}" /></td>
+        </tr>
+        <tr >
+            <td colspan="2"><input type="submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
